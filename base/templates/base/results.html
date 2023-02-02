@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <h3 class="text-center">
+                    Results!
+                </h3>
+            </div>
+            <hr>
+            <div class="col-sm text-center">
+                <p class="lead"> 
+                    {% if y_true == option %}
+                        You Guessed Correctly in
+                    {% else %}
+                        Better luck next time. <br> It took you: 
+                    {% endif %}
+                    <br>
+                    <strong>{{ diff.min }} minutes & {{ diff.sec }} seconds!</strong>
+                </p>
+                {% if diff.min > 1 %}
+                    <p  class="h3">
+                        Good try!
+                    </p>
+                {% else %}
+                    <p  class="h3">
+                        Amazing!
+                    </p>
+                {% endif %}
+
+                <p>
+                    Keep at it to improve your score!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock content %}

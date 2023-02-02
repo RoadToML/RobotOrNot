@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "batisteo.vscode-django",
+        "equinusocio.vsc-material-theme-icons",
+        "esbenp.prettier-vscode",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "ms-python.isort"
+    ]
+}

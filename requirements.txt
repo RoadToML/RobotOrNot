@@ -1,0 +1,8 @@
+stability-sdk==0.3.1
+django==4.1.4
+black==22.12.0
+Pillow==9.4.0
+python-dateutil==2.8.2
+requests==2.28.1
+boto3==1.26.46
+django-storages==1.13.2

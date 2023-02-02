@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% comment %} <h3 class="text-center">
+        Are you ready to put your skills to the test? 
+    </h3>
+    <p class="description text-center">
+        Simply look at the image presented to you and 
+        decide if you think it is real or a creation of AI. 
+    </p>
+    <hr class="my-4"> {% endcomment %}
+
+    {% comment %} <div class="container mt-2">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-center lead">Are you ready to put your skills to the test?</h2>
+                <p class="text-center">Simply look at the image presented to you and decide if you think it is real or a creation of AI.</p>
+            </div>
+        </div>
+    </div>      {% endcomment %}
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-12 text-center text-responsive">
+            <h2 class="text-center lead">Are you ready to put your skills to the test?</h2>
+            <p class="text-center">Simply look at the image presented to you and decide if you think it is real or a creation of AI.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <img class="img-fluid mx-auto" src="{{ img_src }}" alt="An Image that comtains something">
+          </div>
+        </div>
+        <form method="post" action="#">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <button type="submit" value="human" name="option" class="btn btn-outline-primary m-3">Human</button>
+              <button type="submit" value="ai" name="option" class="btn btn-outline-primary m-3">AI</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+
+    {% comment %} <div class="container">
+        <div class="row">
+            {% comment %} Add this block when doing more than1 image {% endcomment %}
+            {% comment %} <div class="col-sm text-center">
+                <p class="lead">Score: </p>
+            </div>
+            <div class="col-sm text-center">
+                <img class="img-fluid" src="{{ img_src }}" alt="An Image that comtains something">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-3 text-end">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <button name="option" value="human" type="submit" class="btn btn-outline-primary">Human</button>
+                </form>
+            </div>
+            <div class="col mt-3">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <button name="option" value="ai" type="submit" class="btn btn-outline-primary">AI</button>
+                </form>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+
+{% endblock content %}

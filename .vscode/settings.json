@@ -1,0 +1,18 @@
+{
+    "editor.rulers": [80, 120],
+
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "isort.args": ["--profile", "black"],
+
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+    },
+
+    "python.linting.ignorePatterns": [
+        "**/site-packages/**/*.py",
+        ".vscode/*.py"
+    ],
+}
